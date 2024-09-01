@@ -1,11 +1,21 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+meu_dano = noone;
 
 velh = 0;
 velv = 0;
 velz = 0;
 vel_max = 1.5;
+
+meu_x = x;
+meu_y = y;
+alcance_x = 30;
+alcance_y = 10;
+
+ponto_x = 0;
+ponto_y = 0;
+tamanho = 10;
 
 estado = noone;
 espera_estado = game_get_speed(gamespeed_fps) * 2;
@@ -13,6 +23,10 @@ timer_estado = espera_estado;
 area_visao = 80;
 _alvo = noone;
 timer_ataque = 0;
+
+
+face = 1;
+z=0;
 
 estado_parado = function() {
 	sprite_index = spr_inimigo_idle;
@@ -74,19 +88,36 @@ estado_checha_area = function(_tamanho_area = 0, _alvo = noone) {
 }
 
 estado_perseguir = function() {
-	var _dist = point_distance(x, y, _alvo.x, _alvo.y);
+	var _dist = point_distance(meu_x, meu_y, ponto_x, ponto_y);
 	
-	var _dir = point_direction(x, y, _alvo.x, _alvo.y);
+	var _dir = point_direction(meu_x, meu_y, ponto_x, ponto_y);
+	
+	meu_y = y - sprite_height /2;
+	meu_x = x;
+	
+	ponto_x = _alvo.x;
+	ponto_y = _alvo.y - _alvo.sprite_height /2;
+	
+	var _dist_x = abs(ponto_x - meu_x);
+	
+	var _dist_y = abs(ponto_y - meu_y);
+	
+
 		
-	velh = lengthdir_x(.5, _dir);
-	velv = lengthdir_y(.5, _dir);
+	velh = lengthdir_x(_dist_x < 30 ? 0 : .5, _dir);
+	velv = lengthdir_y(_dist_y < 5 ? 0 : .5, _dir);
 	
 	if (sprite_index != spr_inimigo_walk) {
 		sprite_index = spr_inimigo_walk;
 		image_index = 0;
 	}
 	
-	if (_dist <= 25) {
+	var _atacar = rectangle_in_rectangle(meu_x, meu_y, meu_x + alcance_x * face, meu_y - alcance_y,
+	ponto_x, ponto_y, ponto_x + tamanho * -face, ponto_y - tamanho);
+	
+	
+
+	if (_atacar) {
 		estado = estado_ataque;
 	}
 }
@@ -101,6 +132,7 @@ estado_ataque = function() {
 	
 	if (image_index > image_number - 1) {
 		estado = estado_parado;
+		delete meu_dano;
 	}
 }
 

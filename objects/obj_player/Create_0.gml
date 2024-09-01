@@ -1,12 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+meu_dano = noone;
 
 velh = 0;
 velv = 0;
 velz = 0;
+
+face = 1;
 vel_max = 1.5;
 estado = noone;
+z=0;
 
 controla_player = function() {
 	var _up, _down, _left, _right, _jump, _kick,_punch;
@@ -52,6 +56,11 @@ estado_walk = function() {
 }
 
 estado_chute = function () {
+	
+	velh = face * vel_max *4;
+	velh = 0;
+
+	
 	if (sprite_index != spr_player_kick) {
 		image_index = 0;
 		sprite_index = spr_player_kick;
@@ -60,6 +69,8 @@ estado_chute = function () {
 	
 	if (image_index >= image_number -1) {
 		estado = estado_idle;
+		
+		delete meu_dano;
 	}
 }
 
@@ -72,6 +83,7 @@ estado_soco = function () {
 	
 	if (image_index >= image_number -1) {
 		estado = estado_idle;
+		delete meu_dano;
 	}
 }
 
