@@ -7,3 +7,9 @@ if (velh != 0) {
 
 
 estado();
+
+meu_hurtbox.atualiza_posicao();
+
+if(is_struct(meu_dano)){
+	meu_dano.checha_colisao();	
+}

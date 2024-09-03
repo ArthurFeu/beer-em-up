@@ -2,6 +2,7 @@
   "FolderOrderSettings":[],
   "ResourceOrderSettings":[
     {"name":"obj_chao","order":1,"path":"objects/obj_chao/obj_chao.yy",},
+    {"name":"obj_entidade","order":3,"path":"objects/obj_entidade/obj_entidade.yy",},
     {"name":"obj_inimigo","order":2,"path":"objects/obj_inimigo/obj_inimigo.yy",},
     {"name":"spr_chao","order":3,"path":"sprites/spr_chao/spr_chao.yy",},
     {"name":"spr_fundo","order":1,"path":"sprites/spr_fundo/spr_fundo.yy",},

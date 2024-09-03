@@ -8,4 +8,8 @@ draw_sprite_ext(sprite_index, image_index, x, y + z, face, image_yscale, image_a
 
 if(is_struct(meu_dano)){
 	meu_dano.desenha_area();	
+	
+
 }
+
+meu_hurtbox.desenha_area();

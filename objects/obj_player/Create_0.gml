@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 meu_dano = noone;
+vida = 100;
 
 velh = 0;
 velv = 0;
@@ -11,6 +12,8 @@ face = 1;
 vel_max = 1.5;
 estado = noone;
 z=0;
+
+meu_hurtbox = new hurtbox(-8,0,8,-40);
 
 controla_player = function() {
 	var _up, _down, _left, _right, _jump, _kick,_punch;
@@ -86,5 +89,10 @@ estado_soco = function () {
 		delete meu_dano;
 	}
 }
+
+estado_dano = function(){
+	image_blend = c_red;
+}
+
 
 estado = estado_idle;

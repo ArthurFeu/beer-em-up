@@ -37,6 +37,7 @@
   "name":"beer",
   "resources":[
     {"id":{"name":"obj_chao","path":"objects/obj_chao/obj_chao.yy",},},
+    {"id":{"name":"obj_entidade","path":"objects/obj_entidade/obj_entidade.yy",},},
     {"id":{"name":"obj_inimigo","path":"objects/obj_inimigo/obj_inimigo.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},

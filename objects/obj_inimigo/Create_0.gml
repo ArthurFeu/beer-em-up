@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 meu_dano = noone;
+vida = 20;
 
 velh = 0;
 velv = 0;
@@ -26,7 +27,9 @@ timer_ataque = 0;
 
 
 face = 1;
-z=0;
+z = 0;
+
+meu_hurtbox = new hurtbox(-15,0,15,-45);
 
 estado_parado = function() {
 	sprite_index = spr_inimigo_idle;
@@ -134,6 +137,12 @@ estado_ataque = function() {
 		estado = estado_parado;
 		delete meu_dano;
 	}
+}
+
+estado_dano = function(){
+	velh = 0;
+	velv= 0;
+	image_blend = c_red;
 }
 
 estado = estado_parado;

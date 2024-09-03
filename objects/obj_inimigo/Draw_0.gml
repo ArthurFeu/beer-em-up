@@ -10,3 +10,11 @@ draw_sprite_ext(sprite_index, image_index, x, y + z, image_xscale *face, image_y
 
 //hitbox
 
+//if(is_struct(meu_dano)){
+//	//meu_dano.desenha_area();	
+	
+//	meu_dano.checha_colisao();
+//}
+
+
+meu_hurtbox.desenha_area();
