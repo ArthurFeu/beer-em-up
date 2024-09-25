@@ -46,7 +46,7 @@ function dano(_x1, _y1, _x2, _y2, _pai = noone) constructor {
 		for(var i = 0; i < _size; i++){
 			var _outro = _lista[| i]
 			
-			if(_outro != pai){
+			if(_outro.object_index != pai.object_index){
 				//var _nome = object_get_name(_outro.object_index);
 				
 				//show_message(_nome);
@@ -58,7 +58,7 @@ function dano(_x1, _y1, _x2, _y2, _pai = noone) constructor {
 				);
 				
 				if(_dano){
-					_outro.vida--;
+					//_outro.vida--;
 					_outro.estado = _outro.estado_dano;
 				}
 			}

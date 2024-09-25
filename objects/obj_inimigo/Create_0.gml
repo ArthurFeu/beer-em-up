@@ -2,7 +2,9 @@
 // You can write your code in this editor
 
 meu_dano = noone;
-vida = 20;
+vida_max = 100;
+vida = vida_max;
+
 
 velh = 0;
 velv = 0;
@@ -142,7 +144,18 @@ estado_ataque = function() {
 estado_dano = function(){
 	velh = 0;
 	velv= 0;
-	image_blend = c_red;
-}
+	
+	if(sprite_index != spr_inimigo_hurt)
+	{
+		sprite_index = spr_inimigo_hurt;
+		image_index = 0;
+	} 
+	
+	if(image_index > image_number -1)
+	{
+		estado = estado_parado;	
+	}
+	
 
+}
 estado = estado_parado;
