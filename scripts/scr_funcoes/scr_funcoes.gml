@@ -1,5 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
+
 function dano(_x1, _y1, _x2, _y2, _pai = noone) constructor {
 	x1 = _x1;
 	x2 = _x2;
@@ -11,6 +13,7 @@ function dano(_x1, _y1, _x2, _y2, _pai = noone) constructor {
 	meu_z = other.z;
 	cor = c_red
 	
+	dei_dano = [];
 	pai = _pai;
 
 
@@ -24,6 +27,20 @@ function dano(_x1, _y1, _x2, _y2, _pai = noone) constructor {
 		meu_x = other.x;
 		meu_y = other.y;
 		meu_z = other.z
+	}
+	
+	static aplica_dano= function(_outro){
+		
+		if (!(_outro.estado == _outro.estado_dano) or _outro.object_index != obj_player)
+		{
+			if(!array_contains(dei_dano, _outro))
+			{
+				_outro.vida--;
+				_outro.estado = _outro.estado_dano;
+				
+				array_push(dei_dano, _outro);
+			}
+		}
 	}
 	
 	static checha_colisao = function (){
@@ -58,8 +75,7 @@ function dano(_x1, _y1, _x2, _y2, _pai = noone) constructor {
 				);
 				
 				if(_dano){
-					//_outro.vida--;
-					_outro.estado = _outro.estado_dano;
+					aplica_dano(_outro);
 				}
 			}
 		}

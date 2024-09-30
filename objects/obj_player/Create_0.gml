@@ -2,8 +2,11 @@
 // You can write your code in this editor
 
 meu_dano = noone;
-vida_max = 100;
+vida_max = 25;
 vida = vida_max;
+vida_barra = 5;
+
+cores_vida = [c_aqua, c_green, c_blue, c_yellow, c_fuchsia, c_lime];
 
 velh = 0;
 velv = 0;
@@ -79,6 +82,7 @@ estado_chute = function () {
 }
 
 estado_soco = function () {
+	
 	if (sprite_index != spr_player_punch) {
 		image_index = 0;
 		sprite_index = spr_player_punch;

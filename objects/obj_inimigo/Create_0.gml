@@ -2,8 +2,11 @@
 // You can write your code in this editor
 
 meu_dano = noone;
-vida_max = 100;
+vida_max = 20;
 vida = vida_max;
+vida_barra = 5;
+
+cores_vida = [c_aqua, c_green, c_blue, c_yellow, c_fuchsia, c_lime];
 
 
 velh = 0;
@@ -153,9 +156,29 @@ estado_dano = function(){
 	
 	if(image_index > image_number -1)
 	{
-		estado = estado_parado;	
+		
+		if(vida <=0){
+			estado = estado_morte;
+		}
+		else{
+			estado = estado_parado;	
+		}
 	}
 	
 
+}
+
+estado_morte = function(){
+	
+	velh = 0;
+	velv = 0;
+	
+	image_speed = 0.1;
+	image_alpha -= .02;
+	
+	if(image_alpha <= 0)
+	{
+		instance_destroy();
+	}
 }
 estado = estado_parado;
