@@ -1,0 +1,21 @@
+{
+  "FolderOrderSettings":[],
+  "ResourceOrderSettings":[
+    {"name":"obj_camera","order":4,"path":"objects/obj_camera/obj_camera.yy",},
+    {"name":"obj_chao","order":1,"path":"objects/obj_chao/obj_chao.yy",},
+    {"name":"obj_entidade","order":3,"path":"objects/obj_entidade/obj_entidade.yy",},
+    {"name":"obj_evento","order":5,"path":"objects/obj_evento/obj_evento.yy",},
+    {"name":"obj_inimigo","order":2,"path":"objects/obj_inimigo/obj_inimigo.yy",},
+    {"name":"spr_camera","order":1,"path":"sprites/spr_camera/spr_camera.yy",},
+    {"name":"spr_chao","order":3,"path":"sprites/spr_chao/spr_chao.yy",},
+    {"name":"spr_fundo","order":1,"path":"sprites/spr_fundo/spr_fundo.yy",},
+    {"name":"spr_inimigo_hurt","order":3,"path":"sprites/spr_inimigo_hurt/spr_inimigo_hurt.yy",},
+    {"name":"spr_inimigo_punch","order":2,"path":"sprites/spr_inimigo_punch/spr_inimigo_punch.yy",},
+    {"name":"spr_inimigo_walk","order":1,"path":"sprites/spr_inimigo_walk/spr_inimigo_walk.yy",},
+    {"name":"spr_level","order":2,"path":"sprites/spr_level/spr_level.yy",},
+    {"name":"spr_player_hurt","order":4,"path":"sprites/spr_player_hurt/spr_player_hurt.yy",},
+    {"name":"spr_player_kick","order":2,"path":"sprites/spr_player_kick/spr_player_kick.yy",},
+    {"name":"spr_player_punch","order":3,"path":"sprites/spr_player_punch/spr_player_punch.yy",},
+    {"name":"spr_player_walk","order":1,"path":"sprites/spr_player_walk/spr_player_walk.yy",},
+  ],
+}

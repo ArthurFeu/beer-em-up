@@ -2,7 +2,14 @@
 // You can write your code in this editor
 
 if (velh != 0) {
-	image_xscale = sign(velh);
+	face = sign(velh);
 }
 
 estado();
+
+if(is_struct(meu_dano)){
+	meu_dano.atualiza_posicao();
+	meu_dano.checha_colisao();
+}
+
+meu_hurtbox.atualiza_posicao();
