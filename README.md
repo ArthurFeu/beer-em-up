@@ -40,6 +40,8 @@ cd beer-em-up
 
 ### GamePlay
 
-<video>
-  <source src="./imgs/gameplay.mp4" type="video/mp4"/>
-</video>
+
+https://github.com/user-attachments/assets/5c1801dd-1057-4bb2-89cb-23a679fd5718
+
+
+
