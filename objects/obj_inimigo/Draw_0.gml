@@ -33,12 +33,29 @@ if(vida >0){
 	
 		_valor_atual = _valor_atual == 0 ? 100 : _valor_atual;
 	
-		var _mostra_fundo = !(i == _qtd);
+		var _mostra_fundo 
 	
-		var _valor = i == _qtd ? _valor_atual : 100;
+		//var _valor = i == _qtd ? _valor_atual : 100;
+		
+		var _valor;
+		if(i == _qtd)
+		{
+			_valor = _valor_atual;
+			
+			_mostra_fundo = false;
+			
+			if(_valor == 100)
+			{
+				_cor = cores_vida[i - 1]
+			}
+		} else{
+			_valor = 100;
+			
+			_mostra_fundo = true
+		}
 	
 		draw_healthbar(x- 20, y - 50, x + 20, y - 55, _valor, c_black, _cor, _cor, 0, _mostra_fundo, 1);
 	}
 }
 
-meu_hurtbox.desenha_area();
+//meu_hurtbox.desenha_area();

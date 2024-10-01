@@ -1,8 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+restart = false
+
 meu_dano = noone;
-vida_max = 25;
+vida_max = 10;
 vida = vida_max;
 vida_barra = 5;
 
@@ -107,9 +109,61 @@ estado_dano = function(){
 	
 	if(image_index >= image_number -1)
 	{
+		
+		if(vida<=0)
+		{
+			estado = estado_morte;
+			restart = true;
+			if (keyboard_check_pressed(vk_space))
+		    {
+		        room_restart()
+		    }
+		}else{
 		estado = estado_idle;
+		}
 	}
 }
 
+estado_espera = function ()
+{
+	sprite_index = spr_player_idle;
+	velh = 0;
+	velv = 0;
+}
+
+estado_andando = function()
+{
+	sprint_index = spr_player_walk;
+}
+
+estado_morte = function()
+{
+	velh = 0;
+	velv = 0;
+	
+	image_speed = 0.1;
+	image_alpha -= .02;
+	
+	if(image_alpha <= 0)
+	{
+		estado = estado_game_over;
+	}
+}
+
+estado_game_over = function()
+{
+    velh = 0;
+    velv = 0;
+    
+    
+  
+    
+    
+    if (keyboard_check_pressed(vk_anykey) || mouse_check_button_pressed(mb_left))
+    {
+        
+        room_restart(); 
+    }
+}
 
 estado = estado_idle;

@@ -1,9 +1,12 @@
 {
   "FolderOrderSettings":[],
   "ResourceOrderSettings":[
+    {"name":"obj_camera","order":4,"path":"objects/obj_camera/obj_camera.yy",},
     {"name":"obj_chao","order":1,"path":"objects/obj_chao/obj_chao.yy",},
     {"name":"obj_entidade","order":3,"path":"objects/obj_entidade/obj_entidade.yy",},
+    {"name":"obj_evento","order":5,"path":"objects/obj_evento/obj_evento.yy",},
     {"name":"obj_inimigo","order":2,"path":"objects/obj_inimigo/obj_inimigo.yy",},
+    {"name":"spr_camera","order":1,"path":"sprites/spr_camera/spr_camera.yy",},
     {"name":"spr_chao","order":3,"path":"sprites/spr_chao/spr_chao.yy",},
     {"name":"spr_fundo","order":1,"path":"sprites/spr_fundo/spr_fundo.yy",},
     {"name":"spr_inimigo_hurt","order":3,"path":"sprites/spr_inimigo_hurt/spr_inimigo_hurt.yy",},

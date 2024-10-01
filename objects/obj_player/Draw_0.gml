@@ -7,7 +7,7 @@
 draw_sprite_ext(sprite_index, image_index, x, y + z, face, image_yscale, image_angle, image_blend, image_alpha)
 
 if(is_struct(meu_dano)){
-	meu_dano.desenha_area();	
+	//meu_dano.desenha_area();	
 }
 
 var _qtd = vida div vida_barra;
@@ -31,4 +31,9 @@ if(vida >0){
 	}
 }
 
-meu_hurtbox.desenha_area();
+if (estado == estado_game_over)
+{
+    draw_text(room_width / 2 - 50, room_height / 2, "GAME OVER");
+}
+
+//meu_hurtbox.desenha_area();

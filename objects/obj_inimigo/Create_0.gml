@@ -181,4 +181,17 @@ estado_morte = function(){
 		instance_destroy();
 	}
 }
+
+estado_espera = function ()
+{
+	sprite_index = spr_inimigo_idle;
+	velh = 0;
+	velv = 0;
+}
+
+estado_andando = function()
+{
+	sprint_index = spr_inimigo_walk;
+}
+
 estado = estado_parado;
