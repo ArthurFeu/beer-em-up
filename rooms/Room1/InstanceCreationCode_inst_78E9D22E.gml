@@ -56,7 +56,7 @@ action = function()
 			
 			lista = [];
 			
-			lista[0] = instance_create_layer(896, 192, "colisores", obj_inimigo);				
+			lista[0] = instance_create_layer(896, 172, "colisores", obj_inimigo);				
 			lista[1] = instance_create_layer(704, 160, "colisores", obj_inimigo);				
 			lista[2] = instance_create_layer(768, 224, "colisores", obj_inimigo);				
 
