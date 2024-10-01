@@ -18,6 +18,8 @@ draw_sprite_ext(sprite_index, image_index, x, y + z, image_xscale *face, image_y
 
 
 
+
+
 var _vida = (vida / vida_max) *100;
 
 var _qtd = vida div vida_barra;

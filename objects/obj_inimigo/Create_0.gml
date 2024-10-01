@@ -194,4 +194,5 @@ estado_andando = function()
 	sprint_index = spr_inimigo_walk;
 }
 
+
 estado = estado_parado;

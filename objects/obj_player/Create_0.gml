@@ -4,7 +4,7 @@
 restart = false
 
 meu_dano = noone;
-vida_max = 10;
+vida_max = 20;
 vida = vida_max;
 vida_barra = 5;
 
@@ -29,8 +29,8 @@ controla_player = function() {
 	_left = keyboard_check(ord("A"));
 	_right = keyboard_check(ord("D"));
 	
-	_kick = keyboard_check_pressed(ord("J"));
-	_punch = keyboard_check_pressed(ord("K"));
+	_kick = keyboard_check_pressed(ord("K"));
+	_punch = keyboard_check_pressed(ord("J"));
 
 	velh = (_right - _left) * vel_max;
 	velv = (_down - _up) * vel_max;
