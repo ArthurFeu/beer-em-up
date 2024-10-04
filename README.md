@@ -16,6 +16,10 @@ O jogo foi desenvolvido para a disciplina de Design e Desenvolvimento de Jogos.
 
 4. Jogue! WASD para se movimentar, J para "Jab" e K para "Kick".
 
+### GamePlay
+
+
+https://github.com/user-attachments/assets/5c1801dd-1057-4bb2-89cb-23a679fd5718
 
 ## Tecnologias
 
@@ -49,10 +53,7 @@ cd beer-em-up
 
   <img src="./imgs/enemies.png" alt="Tela com os inimigos">
 
-### GamePlay
 
-
-https://github.com/user-attachments/assets/5c1801dd-1057-4bb2-89cb-23a679fd5718
 
 
 
