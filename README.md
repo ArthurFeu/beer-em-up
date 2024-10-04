@@ -6,6 +6,17 @@ O Beer em up é um jogo do estilo beat 'em up, onde o jogador controla um person
 
 O jogo foi desenvolvido para a disciplina de Design e Desenvolvimento de Jogos.
 
+## Como jogar o jogo
+
+1. Baixe o arquivo beer.exe
+
+2. Execute o arquivo como administrador 
+
+3. Siga os passos do instalador
+
+4. Jogue! WASD para se movimentar, J para "Jab" e K para "Kick".
+
+
 ## Tecnologias
 
 - Game Maker Engine
